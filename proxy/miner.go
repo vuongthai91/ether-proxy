@@ -1,7 +1,6 @@
 package proxy
 
 import (
-	"../util"
 	"log"
 	"math/big"
 	"strconv"
@@ -9,6 +8,8 @@ import (
 	"sync"
 	"sync/atomic"
 	"time"
+
+	"github.com/sammy007/ether-proxy/util"
 
 	"github.com/ethereum/ethash"
 	"github.com/ethereum/go-ethereum/common"

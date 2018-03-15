@@ -1,11 +1,12 @@
 package proxy
 
 import (
-	"../util"
 	"log"
 	"math/big"
 	"strconv"
 	"strings"
+
+	"github.com/sammy007/ether-proxy/util"
 
 	"github.com/ethereum/go-ethereum/common"
 )

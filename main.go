@@ -8,10 +8,9 @@ import (
 	"path/filepath"
 	"runtime"
 
-	"./proxy"
-
 	"github.com/goji/httpauth"
 	"github.com/gorilla/mux"
+	"github.com/sammy007/ether-proxy/proxy"
 	"github.com/yvasiyarov/gorelic"
 )
 
@@ -85,6 +84,7 @@ func readConfig(cfg *proxy.Config) {
 }
 
 func main() {
+	log.Printf("Loading ..")
 	readConfig(&cfg)
 	startNewrelic()
 	startProxy()

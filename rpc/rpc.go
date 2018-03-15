@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"encoding/json"
 	"errors"
+	"fmt"
 	"io/ioutil"
 	"net/http"
 	"net/url"
@@ -53,7 +54,7 @@ func NewRPCClient(name, rawUrl, timeout string, pool bool) (*RPCClient, error) {
 
 func (r *RPCClient) GetWork() ([]string, error) {
 	params := []string{}
-
+	fmt.Println(r.Url)
 	rpcResp, err := r.doPost(r.Url.String(), "eth_getWork", params)
 	var reply []string
 	if err != nil {

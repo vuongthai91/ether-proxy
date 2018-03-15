@@ -1,0 +1,34 @@
+{
+	"threads": 2,
+
+	"proxy": {
+		"listen": "0.0.0.0:8546",
+		"clientTimeout": "3m",
+		"blockRefreshInterval": "100ms",
+		"hashrateWindow": "15m",
+		"submitHashrate": false,
+		"luckWindow": "24h",
+		"largeLuckWindow": "72h"
+	},
+
+	"frontend": {
+		"listen": "0.0.0.0:8080",
+		"login": "admin",
+		"password": "adminne"
+	},
+
+	"upstreamCheckInterval": "5s",
+	"upstream": [
+		{
+			"pool": true,
+			"name": "etherzero.org",
+			"url": "http://us-pool.etherzero.org:8008/0xbf86615b410a3f6d379ebe4356f78f34d6b730ed/rig",
+			"timeout": "10s"
+		}
+	],
+
+	"newrelicEnabled": false,
+	"newrelicName": "MyEtherProxy",
+	"newrelicKey": "SECRET_KEY",
+	"newrelicVerbose": false
+}
